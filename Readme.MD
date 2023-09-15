@@ -19,17 +19,17 @@ ____
 
 ![main_functions](images_for_readme/main_functions.jpg)
 
-For lowprice, highprice and bestdeal commands, command result message
-contains brief information on each hotel. Into this information
-includes:
+Результаты выполнения команд lowprice, highprice и bestdeal 
+содержат краткую информацию по каждому отелю. 
+В ответ входит:
 
-+ name of the hotel
-+ address
-+ how far is it from the center
-+ price
-+ N photos of the hotel (if the user deems it necessary to display them)
++ название отеля
++ адрес
++ как далеко расположен от центра
++ цена за выбранный период времени бронирования
++ количество фотографий отеля (если пользователь сочтет необходимым их отобразить)
 
-For the development of the project, the open API Hotels is used, which is located on the website rapidapi.com.
+Для разработки проекта используется открытый API Hotels, находящийся на сайте Rapidapi.com.
 
 ```python
 def id_city(user_input: str) -> int:
@@ -66,53 +66,50 @@ def city_hotels(user_input: str) -> Union[int, list[dict]]:
         return hotels
 ```
 
-## **Main functions**
+## **Основные функции**
 ____
 ### **lowprice**
-After entering the command, the user is prompted:
-+ The city where the search will be carried out.
-+ The number of hotels to display as a result (no more than
-predetermined maximum).
-+ The need to upload and display photos for each hotel (“Yes / No”)
-+ If the answer is yes, the user also enters the amount
-necessary photographs (no more than a predetermined
-maximum)
+После ввода команды пользователю будет предложено выбрать:
++ Город, в котором будут проводиться поиски.
++ Количество отелей, отображаемых в результате (не более
+заданного максимума).
++ Необходимость загрузки и отображения фотографий по каждому отелю («Да/Нет»)
++ Если необходимо вывести фотографии, пользователь также вводит количество фотографий 
+(не более заданного максимума, который ограничен самим Телеграмом)
 
 ![lowprice](images_for_readme/lowprice.jpg)
 
 ### **highprice**
-After entering the command, the user is prompted:
-+ The city where the search will be carried out.
-+ The number of hotels to display as a result (no more than
-predetermined maximum).
-+ The need to upload and display photos for each hotel (“Yes / No”)
-+ If the answer is yes, the user also enters the amount
-necessary photographs (no more than a predetermined
-maximum)
+После ввода команды пользователю будет предложено выбрать:
++ Город, в котором будут проводиться поиски.
++ Количество отелей, отображаемых в результате (не более
+заданного максимума).
++ Необходимость загрузки и отображения фотографий по каждому отелю («Да/Нет»)
++ Если необходимо вывести фотографии, пользователь также вводит количество фотографий 
+(не более заданного максимума, который ограничен самим Телеграмом)
 
 ![highprice](images_for_readme/highprice.jpg)
 
 ### **bestdeal**
-After entering the command, the user is prompted:
-+ The city where the search will be carried out.
-+ Price range.
-+ Range of distance at which the hotel is located from the center.
-+ The number of hotels to display as a result (no more than
-predetermined maximum).
-+ The need to upload and display photos for each hotel (“Yes / No”)
-+ If the answer is yes, the user also enters the amount
-necessary photographs (no more than a predetermined
-maximum)
+После ввода команды пользователю будет предложено выбрать:
++ Город, в котором будут проводиться поиски.
++ Ценовой диапазон.
++ Удаленность расположения отеля от центра.
++ Количество отелей, отображаемых в результате (не более
+заданного максимума).
++ Необходимость загрузки и отображения фотографий по каждому отелю («Да/Нет»)
++ Если необходимо вывести фотографии, пользователь также вводит количество фотографий 
+(не более заданного максимума, который ограничен самим Телеграмом)
 
 ![bestdeal](images_for_readme/bestdeal.jpg)
 
-Added calendar functionality to all of the above commands (booking a hotel for certain dates).
+Ко всем вышеперечисленным командам добавлена ​​функциональность календаря (бронирование отеля на определенные даты).
 
 ![calendar_year](images_for_readme/calendar_year.jpg)
 ![calendar_month](images_for_readme/calendar_month.jpg)
 ![calendar_day](images_for_readme/calendar_day.jpg)
 
-The calendar is implemented using the telegram_bot_calendar library.
+Календарь реализован с помощью библиотеки telegram_bot_calendar.
 
 ```python
 calendar, step = MyStyleCalendar(min_date=datetime.datetime.today().date()).build()
@@ -136,19 +133,19 @@ calendar, step = MyStyleCalendar(min_date=datetime.datetime.today().date()).buil
 ```
 
 ### **history**
-After entering the command, the user is shown the search history of hotels. The story itself
-contains:
-+ The command entered by the user.
-+ Date and time the command was entered.
-+ Hotels that were found.
+После ввода команды пользователю отображается история поиска отелей. Сама история
+содержит:
++ Команду, введенная пользователем.
++ Дату и время ввода команды.
++ Найденные отели с краткой информацией.
 
 ![history](images_for_readme/command_information.png)
 
 
-## **Additional functions**
+## **Дополнительные функции**
 ____
 ### **help**
-Help with bot commands.
+Вывод функциональности бота с его командами.
 
 ```python
     def helper(message, user_id, user_message) -> Any:
@@ -162,9 +159,9 @@ Help with bot commands.
 
 ![help](images_for_readme/help.jpg)
 
-## **Start**
+## **Старт**
 ____
-The /start command is used to get started. After entering the command, one of three greetings is displayed and a suggestion to use the help function to remind existing bot commands.
+Команда /start используется для запуска. После ввода команды отображается одно из трёх приветствий и предложение воспользоваться функцией помощи для напоминания существующих команд бота.
 
 ```python
     def hello(message) -> None:
