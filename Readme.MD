@@ -1,4 +1,4 @@
-# <center>**hotel_analysis_bot**
+# <center>**Hotel_analysis_bot**
 
 
 ![python](https://img.shields.io/pypi/pyversions/p?color=g&style=plastic)
@@ -6,16 +6,16 @@
 
 ![photo_hotel](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnaTucADaC8pKAWBedXE1hnReDwzQ8XFAuVYvmrkmpIee_5ixowJOZAWYIX0URgx9-1HI&usqp=CAU)
 
-## **Description**
+## **Описание**
 ____
 
-The bot was developed from scratch in Python. For implementation, the pytelegrambotapi library was taken as a basis, which is a convenient and lightweight library for creating bots on Pyrhon for a telegram.
-The bot performs 4 main functions, namely:
+Бот разработан на Python. Для реализации за основу была взята библиотека pytelegrambotapi, представляющая собой удобную и легкую библиотеку для создания ботов на Pyrhon для телеграма.
+Бот выполняет 4 основные функции, а именно:
 
-+ lowprice - selection of the cheapest hotels in the city
-+ highprice - selection of the expensive hotels in the city
-+ bestdeal - selection of hotels that are most suitable for price and       location from center
-+ history - hotel search history output
++ lowprice - подборка самых дешевых отелей города
++ highprice - подборка самых дорогих отелей города
++ bestdeal - подборка отелей, наиболее подходящих по цене и расположению от центра
++ history - вывод истории поиска отелей
 
 ![main_functions](images_for_readme/main_functions.jpg)
 
